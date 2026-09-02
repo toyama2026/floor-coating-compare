@@ -15,9 +15,7 @@ export default function Hero({ onOpenDiagnosis, onScrollToCompanies }: HeroProps
           <h1>
             床を、長くきれいに。
             <br />
-            あなたの家に合う
-            <br />
-            <em>フロアコーティング</em>が見つかる。
+            合う<em>フロアコーティング</em>が見つかる。
           </h1>
           <p>全国の施工会社を比較して、最適なプランを無料でご提案します。</p>
           <div className="hero-actions">
@@ -38,11 +36,11 @@ export default function Hero({ onOpenDiagnosis, onScrollToCompanies }: HeroProps
         <div>
           <Map size={31} />
           <span>
-            <b>全国の優良施工店を掲載</b>
+            <b>全国の施工店を掲載</b>
             <small>
-              厳しい審査を通過した
+              公開している基準で
               <br />
-              信頼できる会社のみ
+              価格・実績を比較
             </small>
           </span>
         </div>

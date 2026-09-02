@@ -9,7 +9,9 @@ import DiagnosisBanner from "@/components/home/DiagnosisBanner";
 import DiagnosisModal from "@/components/home/DiagnosisModal";
 import Header from "@/components/home/Header";
 import Hero from "@/components/home/Hero";
+import PriceEstimator from "@/components/home/PriceEstimator";
 import SiteFooter from "@/components/home/SiteFooter";
+import TrustSection from "@/components/home/TrustSection";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,7 +23,7 @@ export default function Home() {
     <div className="jp-site">
       <div className="top-notice">
         <div className="jp-container">
-          <span>全国の優良施工店を比較できます</span>
+          <span>全国の施工店を公開基準で比較できます</span>
           <span>比較基準・料金目安を2026年9月に更新</span>
         </div>
       </div>
@@ -34,9 +36,11 @@ export default function Home() {
       <main id="top">
         <Hero onOpenDiagnosis={() => setDiagnosisOpen(true)} onScrollToCompanies={scrollToCompanies} />
         <DiagnosisBanner onOpenDiagnosis={() => setDiagnosisOpen(true)} />
+        <PriceEstimator coatings={coatings} />
         <CoatingTypesSection coatings={coatings} />
         <BrowseSection onOpenDiagnosis={() => setDiagnosisOpen(true)} />
         <CompaniesSection companies={companies} />
+        <TrustSection />
         <BottomCta onOpenDiagnosis={() => setDiagnosisOpen(true)} />
       </main>
       <SiteFooter onOpenDiagnosis={() => setDiagnosisOpen(true)} />
