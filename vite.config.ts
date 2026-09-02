@@ -225,7 +225,10 @@ export default defineConfig(({ command }) => ({
   envDir: path.resolve(import.meta.dirname),
   root: path.resolve(import.meta.dirname, "client"),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    // Render's static-site build defaults to publishing the repo-root "public"
+    // directory, so the build output lives there (not the Express server's
+    // "dist/public") — see server/index.ts for the matching production path.
+    outDir: path.resolve(import.meta.dirname, "public"),
     emptyOutDir: true,
   },
   server: {
